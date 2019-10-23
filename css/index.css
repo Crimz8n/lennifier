@@ -1,0 +1,89 @@
+a {
+    color: #aaaaaa;
+	text-decoration: none;
+	transition-duration: 0.1s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+
+    font-family: "Consolas", sans-serif;
+    text-align: center;
+
+    user-select: none;
+}
+
+header {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header *:nth-child(1) {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+}
+
+main * {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main *:nth-child(1) {
+    top: 33%;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+main *:nth-child(2) {
+    top: 66%;
+
+    width: 50%;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 16px;
+}
+
+
+
+.smooth-blink {
+    animation: smooth-blink-animation normal 2s infinite ease-in-out;
+}
+
+.section {
+    padding: 3rem;
+}
+
+
+
+@keyframes smooth-blink-animation {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
