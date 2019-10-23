@@ -41,6 +41,7 @@ const hMouthMap = {
     "o": "O",
     "P": "⊱",
     "p": "⊱",
+    "/": "_",
     "|": "_",
     "*": "з",
     "3": "ω",
@@ -95,7 +96,7 @@ function parseEmoticon(str) {
     const isVerticalWithoutMouth = isVertical && str.length == 2 && !str.charAt(0).match(/[:;=XxB8|]/);
 
     if (!isVertical && str.charAt(0) == ">") str = str.substr(1); // Fix emoticons beggining with >, e.g. >:) -> :)
-    if (!isVertical && str.length > 2 && str.charAt(str.length - 1).match(/[DOoPp|*3><\]\[\^}{]/)) str = str.charAt(0) + str.substr(2); // Fix nose for emotes with nose-incompatible mouth, e.g. X-D
+    if (!isVertical && str.length > 2 && str.charAt(str.length - 1).match(/[DOoPp*3><\]\[\^}{]/)) str = str.charAt(0) + str.substr(2); // Fix nose for emotes with nose-incompatible mouth, e.g. X-D
 
     const eyes = str.charAt(0);
     const nose = str.length == 2 ? " " : (isVertical ? " " : str.charAt(1));
