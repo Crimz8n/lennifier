@@ -102,7 +102,6 @@ function parseEmoticon(str) {
     const nose = str.length == 2 ? " " : (isVertical ? " " : str.charAt(1));
     const mouth = !isVertical ? str.charAt(str.length - 1) : (isVerticalWithoutMouth ? "" : str.charAt(1));
 
-    console.log("E" + eyes, "N" + nose, "M" + mouth);
     return { vertical: isVertical, eyes: eyes, nose: nose, mouth: mouth };
 }
 
